@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "beae75c2-22be-4fe8-9c1e-9377c291ce50",
+		"name": "vouting system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41717490"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post poll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNmJiN2FlNy01YmFmLTRjZTAtOWY3Mi1mYzc3ZjY5MGI5Y2IiLCJlbWFpbCI6InVzZXIxMjM0QGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4MTY1Njc4LCJleHAiOjE3NDgxNjkyNzh9.LszivYV8StEt1JXFHjAsLhSbcNdAUSzm1DtaaBagVaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"question\": \"What is your favorite programming language?\",\r\n  \"options\": [\"JavaScript\", \"Python\", \"C++\", \"Java\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/polls",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"polls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get active",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ODkyYzEyNi1jNmJhLTQxMzEtOGMzYy05MzIzM2FmZDU2MGEiLCJlbWFpbCI6InVzZXIxMjM0QGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4MTc5MTk4LCJleHAiOjE3NDgxODI3OTh9.AA1VVkzA8cQ6IrwrE9cqIAL81Vc0Rf5aU1ryXPGFWtE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/polls/active",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"polls",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ODkyYzEyNi1jNmJhLTQxMzEtOGMzYy05MzIzM2FmZDU2MGEiLCJlbWFpbCI6InVzZXIxMjM0QGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4MTc5MTk4LCJleHAiOjE3NDgxODI3OTh9.AA1VVkzA8cQ6IrwrE9cqIAL81Vc0Rf5aU1ryXPGFWtE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/polls/active",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"polls",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmUyMDY5My05NTUzLTQzMmItOGQ3Yy03MGFjNjgxZWM2MGYiLCJlbWFpbCI6InVzZXIxMnczNEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ4MTgxNzgzLCJleHAiOjE3NDgxODUzODN9.mRjelECvutfG3hMGfpnPlNWwZZPoQ68Uq65zFD1XHgk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation vote($input: VoteInput!) { vote(input: $input) }\",\r\n  \"variables\": {\r\n    \"input\": {\r\n      \"pollId\": \"26d7be46-77ff-477c-83a1-7059404a4946\",\r\n      \"option\": \"C++\"\r\n    }\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deactivate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ODkyYzEyNi1jNmJhLTQxMzEtOGMzYy05MzIzM2FmZDU2MGEiLCJlbWFpbCI6InVzZXIxMjM0QGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4MTc5MTk4LCJleHAiOjE3NDgxODI3OTh9.AA1VVkzA8cQ6IrwrE9cqIAL81Vc0Rf5aU1ryXPGFWtE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/polls/:id/deactivate",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"polls",
+						":id",
+						"deactivate"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3b2f7acd-a7a1-4396-a90e-77bfec55d6cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ODkyYzEyNi1jNmJhLTQxMzEtOGMzYy05MzIzM2FmZDU2MGEiLCJlbWFpbCI6InVzZXIxMjM0QGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4MTc5MTk4LCJleHAiOjE3NDgxODI3OTh9.AA1VVkzA8cQ6IrwrE9cqIAL81Vc0Rf5aU1ryXPGFWtE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sadyk\",\r\n  \"email\": \"user123@example.com\",\r\n  \"password\": \"strong123\",\r\n  \"role\": \"user\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/polls/:id/deactivate",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"polls",
+						":id",
+						"deactivate"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3b2f7acd-a7a1-4396-a90e-77bfec55d6cc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
